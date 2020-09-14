@@ -22,7 +22,7 @@
     position: relative;
     display: flex;
     width: 25em;
-    height: 3em;
+    height: 2.7em;
     line-height: 3;
     background: #2c3e50;
     overflow: hidden;
@@ -57,3 +57,39 @@
    
   }
   
+  /*Select Details*/
+  
+  /* Reset Select */
+  
+  /* Custom Select */
+  .selectdetail {
+    position: relative;
+    display: flex;
+    width: 42.5em;
+    height: 2.7em;
+    line-height: 3;
+    background: #4dff4d;
+    overflow: hidden;
+    border-radius: .25em;
+  }
+  
+  /* Arrow */
+  .selectdetail::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #34495e;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+    
+  }
+  /* Transition */
+  .selectdetail:hover::after {
+    color: #f39c12;
+   
+  }

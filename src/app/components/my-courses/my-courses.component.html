@@ -1,69 +1,110 @@
-<button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample"
-        (click)="frame.show()" mdbWavesEffect>Launch Modal
-</button>
+<div class="container">
 
-<div mdbModal #frame="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
-     aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <mdb-icon fas icon="user" class="prefix grey-text"></mdb-icon>
-          <input type="text" id="form34" class="form-control" mdbInput mdbValidate [formControl]="contactFormModalCourseName">
-          <label for="form34">Course name</label>
-          <mdb-error
-            *ngIf="contactFormModalCourseName.invalid && (contactFormModalCourseName.dirty || contactFormModalCourseName.touched)">Input
-            invalid
-          </mdb-error>
-          <mdb-success
-            *ngIf="contactFormModalCourseName.valid && (contactFormModalCourseName.dirty || contactFormModalCourseName.touched)">Input
-            valid
-          </mdb-success>
+<br>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+        Add Course
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Add Your Course</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                          <label for="recipient-name" class="col-form-label">Course Name </label>
+                          <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                          <label for="message-text" class="col-form-label">Course Description:</label>
+                          <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Shop</label>
+                            <div class="select">
+                                <select name="slct" id="slct">
+                                    <option selected disabled>--------------------  Select --------------------</option>
+                                    <option value="1">Lotteria</option>
+                                    <option value="2">KFC </option>
+                                    <option value="3">Pizza Hut</option>
+                                </select>
+                            </div>
+                          </div>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
         </div>
-
-        <div class="md-form mb-5">
-          <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon>
-          <input type="email" id="form29" class="form-control" mdbInput mdbValidate
-                 [formControl]="contactFormModalCourseDescription">
-          <label for="form29">Decription</label>
-          <mdb-error
-            *ngIf="contactFormModalCourseDescription.invalid && (contactFormModalCourseDescription.dirty || contactFormModalCourseDescription.touched)">
-            Input invalid
-          </mdb-error>
-          <mdb-success
-            *ngIf="contactFormModalCourseDescription.valid && (contactFormModalCourseDescription.dirty || contactFormModalCourseDescription.touched)">Input
-            valid
-          </mdb-success>
-        </div>
-
-        <div class="md-form mb-5">
-          <mdb-icon fas icon="tag" class="prefix grey-text"></mdb-icon>
-          <input type="text" id="form32" class="form-control" mdbInput mdbValidate
-                 [formControl]="contactFormModalShop">
-          <label for="form32">Shop</label>
-          <mdb-error
-            *ngIf="contactFormModalShop.invalid && (contactFormModalShop.dirty || contactFormModalShop.touched)">
-            Input invalid
-          </mdb-error>
-          <mdb-success
-            *ngIf="contactFormModalShop.valid && (contactFormModalShop.dirty || contactFormModalShop.touched)">
-            Input valid
-          </mdb-success>
-        </div>
-
-
-      </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <button mdbBtn color="unique" class="waves-light" mdbWavesEffect>Send
-          <mdb-icon far icon="paper-plane" class="ml-1"></mdb-icon>
-        </button>
-      </div>
     </div>
-  </div>
+
+    <h1></h1>
+
+    <div class="row">
+        <div class="col-md-5 col-xs-6 ">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">KFC Food</h4>
+
+                </div>
+                <div class="card-body">
+                    <p>Shop : KFC Restaurant</p>
+                    <p>Phone : 19009191</p>
+                    <p>Description : Hello Word</p>
+                    <p>CreatedDate : 2020-14-09</p>
+                    <hr>
+
+                    <div class="select">
+                        <select name="slct" id="slct">
+                            <option selected disabled>Opening</option>
+                            <option value="1">End Order</option>
+                            <option value="2">Delivered </option>
+                            <option value="3">End of Payment</option>
+                        </select>
+                    </div>
+                    <hr>
+                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">
+                        <a routerLink = "/course">Details</a>
+                    </button>
+
+                </div>
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Looteria Food</h4>
+
+                    </div>
+
+                    <div class="card-body">
+                        <p>Shop : Lotteria Restaurant</p>
+                        <p>Phone : 19006600</p>
+                        <p>Description : Hello Word</p>
+                        <p>CreatedDate : 2020-14-09</p>
+                        <hr>
+                        <div class="select">
+                            <select name="slct" id="slct">
+                                <option selected disabled>Opening</option>
+                                <option value="1">End Order</option>
+                                <option value="2">Delivered </option>
+                                <option value="3">End of Payment</option>
+                            </select>
+                        </div>
+                        <hr>
+
+                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Details</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

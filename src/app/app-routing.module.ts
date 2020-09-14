@@ -7,9 +7,10 @@ import {CartComponent} from "./components/cart/cart.component";
 import {CheckoutComponent} from "./components/checkout/checkout.component";
 import {ProductComponent} from "./components/product/product.component";
 import {ThankyouComponent} from "./components/thankyou/thankyou.component";
-import { MyCoursesComponent } from './components/my-courses/my-courses.component';
 import { DetailsComponent } from './components/details/details.component';
 import { OrderComponent } from './components/order/order.component';
+import { MyCoursesComponent } from './components/my-courses/my-courses.component';
+import { CourseComponent } from './course/course.component';
 
 
 const routes: Routes = [
@@ -34,14 +35,18 @@ const routes: Routes = [
   {
     path: 'thankyou', component: ThankyouComponent
   },
-  {
-    path: 'my-courses', component: MyCoursesComponent
-  },
+ 
   {
     path: 'details/:id', component: DetailsComponent
   },
   {
     path: 'order', component: OrderComponent
+  },
+  {
+    path: 'mycourses', component: MyCoursesComponent
+  },
+  {
+    path: 'course', component: CourseComponent
   }
 ];
 

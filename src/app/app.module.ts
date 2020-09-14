@@ -21,6 +21,7 @@ import { MyCoursesComponent } from './components/my-courses/my-courses.component
 import { DetailsComponent } from './components/details/details.component';
 import { OrderComponent } from './components/order/order.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { CourseComponent } from './course/course.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     ThankyouComponent,
     MyCoursesComponent,
     DetailsComponent,
-    OrderComponent
+    OrderComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,
